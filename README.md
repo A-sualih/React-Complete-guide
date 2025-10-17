@@ -1,4 +1,4 @@
-# 👨‍💻 Software Engineer | Full-Stack Developer & 3D Web Specialist
+# 👨‍💻 Software Engineer | Full-Stack Developer
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 ### Core Competencies
 
 
-### Frontend & 3D Ecosystem
+### Frontend & Backend
 <p align="center">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
