@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=Ahmed  %20Sualih&fontSize=40&animation=fadeIn)
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=Ahmed  %20&fontSize=40&animation=fadeIn)
 🚀 Featured Projects
 🔥 Full-Stack Applications
 E-Commerce Platform | Live Demo | GitHub
