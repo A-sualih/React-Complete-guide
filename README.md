@@ -1,8 +1,8 @@
-👨‍💻 Full-Stack Developer
-<div align="center">
-https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=Ahmed%2520Sualih&fontSize=40&animation=fadeIn
+# 👨‍💻 Software Engineer | Full-Stack Developer & 3D Web Specialist
 
-<!-- Animated Typing Text --><img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=25&duration=4000&pause=1000&color=00FF00&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;MERN+Stack+Specialist;React+Next.js+Expert;Node.js+Backend+Developer;Cloud+Deployment+Pro" alt="Typing SVG" /></div>
+<div align="center">
+
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=Abdilkerim%20Juhar&fontSize=40&animation=fadeIn)
 🚀 Featured Projects
 🔥 Full-Stack Applications
 E-Commerce Platform | Live Demo | GitHub
