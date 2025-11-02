@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  /* use max-width so layout doesn't force horizontal overflow on small viewports */
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Hide page-level horizontal scrollbar while preserving element-level scrolling */
+html, body {
+  overflow-x: hidden;
+}
+@keyframes fadIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
