@@ -1,0 +1,117 @@
+/* GLOBAL ISLAMIC STYLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.about-section {
+  width: 100%;
+  background: #faf6f1;
+  padding: 80px 20px;
+  animation: fadeInPage 1s ease-in-out;
+}
+
+/* Page fade animation */
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* FLEX LAYOUT */
+.about-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (min-width: 992px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* IMAGE */
+.about-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.18);
+  transition: 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+@media (min-width: 992px) {
+  .about-image {
+    width: 50%;
+  }
+}
+
+/* TEXT CONTENT */
+.about-content {
+    margin-top: 50px;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInText 1.4s ease forwards;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+@media (min-width: 992px) {
+  .about-content {
+    width: 50%;
+  }
+}
+
+.about-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #c6a47e;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-quote {
+  font-size: 28px;
+  font-weight: 600;
+  color: #c6a47e;
+  background: #fff;
+  padding: 20px;
+  border-left: 6px solid #c6a47e;
+  border-radius: 10px;
+  margin: 30px 0;
+  font-family: "Noto Naskh Arabic", serif;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: #c6a47e;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 14px rgba(198, 164, 126, 0.4);
+}
+
+.about-btn:hover {
+  background: #b18e68;
+  transform: translateY(-3px);
+}
