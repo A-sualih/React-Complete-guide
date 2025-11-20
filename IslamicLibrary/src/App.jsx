@@ -5,6 +5,7 @@ import ChatButton from "./Components/ChatButton/ChatButton";
 import "./App.css";
 import PillarsOfIslam from "./Components/PillarsOfIslam/PillarsOfIslam";
 import AboutSection from "./Components/AboutSection/AboutSection";
+import HomePage from "./Components/Homepage/Homepage";
 const App = () => {
   return (
     <div className="app">
@@ -13,6 +14,7 @@ const App = () => {
       <ChatButton />
       <PillarsOfIslam />
       <AboutSection/>
+      <HomePage/>
     </div>
   );
 };

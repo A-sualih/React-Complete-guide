@@ -1,0 +1,97 @@
+/* Beautiful Arabic + English fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Scheherazade+New:wght@400;700&family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+.page-light {
+  min-height: 100vh;
+  background: #f5e9d7;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* MAIN TITLE */
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #3a2e20;   /* deep brown */
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+/* SUBTITLE */
+.subtitle {
+  font-family: "Merriweather", serif;
+  font-size: 22px;
+  color: #5b4636;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* BISMILLAH */
+.bismillah {
+  font-family: "Scheherazade New", serif;
+  font-size: 44px;
+  margin-bottom: 45px;
+  color: #1f8b4c;   /* beautiful Islamic green */
+  text-align: center;
+  direction: rtl;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* ISLAMIC BORDER */
+.ayah-border {
+  padding: 18px;
+  border-radius: 45px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #b08968,
+      #b08968 10px,
+      #d4b892 10px,
+      #d4b892 20px
+    );
+  display: inline-block;
+  margin: 40px auto;
+}
+
+/* AYAH BOX */
+.ayah-box {
+  background: #08b745;
+  border-radius: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(6, 147, 158, 0.15);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* Hover Effect */
+.ayah-box:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transform: translateY(-5px);
+  background: #0cbe5f;
+}
+
+/* ARABIC TEXT (Ayah) */
+.arabic-text {
+  font-family: "Amiri Quran", serif;
+  font-size: 40px;
+  color: #c51313;
+  direction: rtl;
+  line-height: 2.5;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ENGLISH TRANSLATION */
+.english-translation {
+  font-family: "Merriweather", serif;
+  max-width: 900px;
+  margin: 35px auto 0;
+  font-size: 23px;
+  line-height: 1.9;
+  color: #3b2e1b;
+  text-align: center;
+  font-weight: 300;
+}
