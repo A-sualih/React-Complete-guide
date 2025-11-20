@@ -6,6 +6,7 @@ import "./App.css";
 import PillarsOfIslam from "./Components/PillarsOfIslam/PillarsOfIslam";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import HomePage from "./Components/Homepage/Homepage";
+import PrayerTimings from "./Components/Homepage/PrayerTimings";
 const App = () => {
   return (
     <div className="app">
@@ -15,6 +16,7 @@ const App = () => {
       <PillarsOfIslam />
       <AboutSection/>
       <HomePage/>
+      <PrayerTimings/>
     </div>
   );
 };

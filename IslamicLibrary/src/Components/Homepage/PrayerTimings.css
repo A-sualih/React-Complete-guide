@@ -1,0 +1,74 @@
+/* Container */
+.pt-container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #1372ac;
+}
+
+/* Titles */
+.pt-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.pt-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #0dbf0d;
+}
+
+/* Prayer grid */
+.pt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.pt-card {
+  background: hsl(166, 95%, 25%);
+  padding: 20px 10px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.pt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Name */
+.pt-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:rgb(43, 227, 43);
+}
+
+/* Time */
+.pt-time {
+  background: #2105c2;
+  color: white;
+  font-size: 1.8rem;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .pt-title {
+    font-size: 2rem;
+  }
+
+  .pt-time {
+    font-size: 1.5rem;
+  }
+}

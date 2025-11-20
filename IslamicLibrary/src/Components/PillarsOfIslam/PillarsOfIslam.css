@@ -66,10 +66,10 @@
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  color: #e3f2fd;
-  opacity: 0.95;
-  font-weight: 300;
+  font-size:2rem;
+  color: #c31717;
+
+  font-weight: 1000;
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.6;
