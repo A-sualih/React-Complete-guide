@@ -7,6 +7,8 @@ import PillarsOfIslam from "./Components/PillarsOfIslam/PillarsOfIslam";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import HomePage from "./Components/Homepage/Homepage";
 import PrayerTimings from "./Components/Homepage/PrayerTimings";
+import ServicesSection from "./Components/Service/ServicesSection";
+import DonationCard from "./Components/Service/DonationCard";
 const App = () => {
   return (
     <div className="app">
@@ -17,6 +19,8 @@ const App = () => {
       <AboutSection/>
       <HomePage/>
       <PrayerTimings/>
+      <ServicesSection/>
+      <DonationCard/>
     </div>
   );
 };
