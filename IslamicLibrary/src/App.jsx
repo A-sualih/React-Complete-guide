@@ -9,6 +9,7 @@ import HomePage from "./Components/Homepage/Homepage";
 import PrayerTimings from "./Components/Homepage/PrayerTimings";
 import ServicesSection from "./Components/Service/ServicesSection";
 import DonationCard from "./Components/Service/DonationCard";
+import Courses from "./Components/Courses/Courses";
 const App = () => {
   return (
     <div className="app">
@@ -21,6 +22,7 @@ const App = () => {
       <PrayerTimings/>
       <ServicesSection/>
       <DonationCard/>
+      <Courses/>
     </div>
   );
 };
