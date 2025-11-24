@@ -5,7 +5,7 @@ import nikah from "../../assets/service-2.png";
 import funeral from "../../assets/service-3.png";
 export default function ServicesSection() {
   return (
-    <section className="services-section">
+    <section className="services-section" id="services">
       <h2 className="services-title">Services</h2>
       <p className="services-subtitle">
         It is the responsibility of every Muslim to serve for DEEN

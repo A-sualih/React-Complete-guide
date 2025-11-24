@@ -18,7 +18,7 @@
     #1a237e 100%
   );
   padding: 2rem;
-  color: white;
+  color: rgb(28, 234, 72);
   position: relative;
   overflow: hidden;
   font-family: "Inter", sans-serif;
@@ -67,7 +67,7 @@
 
 .subtitle {
   font-size:2rem;
-  color: #c31717;
+  color: #9817c3;
 
   font-weight: 1000;
   max-width: 500px;
@@ -664,9 +664,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .pillars-columns-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
   }
 
@@ -706,7 +706,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .pillars-columns-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
