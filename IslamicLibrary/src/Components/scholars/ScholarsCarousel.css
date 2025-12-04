@@ -1,0 +1,569 @@
+/* ScholarsCarousel.css - UPDATED FOR WIDER IMAGES */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --islamic-green: #0ada53;
+  --islamic-gold: #d4af37;
+  --light-gold: #fef9c3;
+  --cream: #fef3c7;
+  --dark-text: #1a202c;
+  --light-text: #718096;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+body {
+  background: linear-gradient(135deg, #f8f0e3 0%, #fff9db 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.scholars-carousel-container {
+  max-width: 1600px; /* Increased from 1400px for wider layout */
+  margin: 0 auto;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Background Pattern */
+.scholars-carousel-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px);
+  z-index: -1;
+}
+
+/* Header Styles */
+.scholars-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.scholars-title {
+  font-family: 'Amiri', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--islamic-green);
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #3012dadd;
+  position: relative;
+  display: inline-block;
+}
+
+.scholars-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--islamic-gold), transparent);
+}
+
+.scholars-subtitle {
+  font-family: 'Amiri', serif;
+  font-size: 1.3rem;
+  color: var(--light-text);
+  margin: 25px auto 30px;
+  line-height: 1.8;
+  max-width: 600px;
+  font-style: italic;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.divider-line {
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(to right, var(--islamic-green), var(--islamic-gold));
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+.divider-line::after {
+  content: 'ﷺ';
+  font-family: 'Noto Naskh Arabic', serif;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 15px;
+  font-size: 1.5rem;
+  color: var(--islamic-green);
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+  background: var(--card-bg);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 2px solid var(--islamic-gold);
+  font-size: 2.5rem;
+  color: var(--islamic-green);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+  background: var(--islamic-green);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(26, 71, 42, 0.3);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.nav-arrow:disabled:hover {
+  background: var(--card-bg);
+  color: var(--islamic-green);
+  transform: none;
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.arrow-icon {
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Carousel Content - Flex Display */
+.carousel-content {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.scholars-flex-container {
+  display: flex;
+  gap: 40px; /* Increased gap for wider cards */
+  padding: 10px;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Scholar Card - WIDER DESIGN */
+.scholar-card {
+  background: var(--card-bg);
+  border-radius: 25px; /* Slightly larger radius */
+  overflow: hidden;
+  box-shadow: 0 15px 40px var(--shadow-color);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  width: calc((100% - (40px * 2)) / 3); /* 3 cards with larger gaps */
+  min-width: 380px; /* Much wider minimum width */
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+  height: auto; /* Let content determine height */
+}
+
+.scholar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border-color: var(--islamic-gold);
+}
+
+/* Image Container - WIDER AND SHORTER */
+.scholar-image-container {
+  position: relative;
+  height: 220px; /* Reduced height for wider appearance */
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.scholar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  object-position: center 20%; /* Focus on upper part for better composition */
+}
+
+.scholar-card:hover .scholar-image {
+  transform: scale(1.08);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(26, 71, 42, 0.5)); /* Adjusted gradient */
+}
+
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--islamic-green), #2d5a27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.fallback-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.fallback-name {
+  font-family: 'Amiri', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.scholar-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--islamic-green);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Scholar Info - Adjusted for wider layout */
+.scholar-info {
+  padding: 30px; /* Increased padding for wider cards */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px; /* Ensure consistent height */
+}
+
+.scholar-name {
+  font-family: 'Amiri', serif;
+  font-size: 2rem; /* Slightly larger for wider cards */
+  color: var(--islamic-green);
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.mosque-support {
+  background: rgba(248, 250, 252, 0.8);
+  padding: 25px; /* Increased padding */
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--islamic-gold); /* Thicker border */
+  flex: 1;
+}
+
+.support-text {
+  font-family: 'Amiri', serif;
+  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 1.7;
+  color: var(--light-text);
+  text-align: center;
+  font-style: italic;
+}
+
+.scholar-actions {
+  display: flex;
+  gap: 15px; /* Increased gap */
+  margin-top: auto;
+}
+
+.donate-btn, .learn-btn {
+  flex: 1;
+  padding: 14px; /* Increased padding */
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Increased gap */
+}
+
+.donate-btn {
+  background: linear-gradient(135deg, var(--islamic-green), #2d5a27);
+  color: white;
+  box-shadow: 0 5px 15px rgba(26, 71, 42, 0.2);
+}
+
+.donate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 71, 42, 0.3);
+}
+
+.learn-btn {
+  background: transparent;
+  color: var(--islamic-green);
+  border: 2px solid var(--islamic-green);
+}
+
+.learn-btn:hover {
+  background: var(--islamic-green);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 40px 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--islamic-green);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px rgba(26, 71, 42, 0.2);
+}
+
+.dot:hover:not(.active) {
+  background: #94a3b8;
+}
+
+/* Footer */
+.scholars-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.quran-verse {
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: 1.8rem;
+  color: var(--islamic-green);
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.verse-translation {
+  font-family: 'Amiri', serif;
+  font-size: 1.1rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Responsive Design - WIDER LAYOUT */
+@media (max-width: 1400px) {
+  .scholars-carousel-container {
+    max-width: 1200px;
+  }
+  
+  .scholar-card {
+    min-width: 320px;
+    width: calc((100% - (30px * 2)) / 3);
+  }
+}
+
+@media (max-width: 1200px) {
+  .scholar-card {
+    width: calc((100% - (30px * 2)) / 3);
+  }
+  
+  .scholar-image-container {
+    height: 200px;
+  }
+  
+  .scholar-info {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .scholars-carousel-container {
+    padding: 60px 30px;
+  }
+  
+  .scholars-title {
+    font-size: 3rem;
+  }
+  
+  .scholar-card {
+    width: calc((100% - (20px * 1)) / 2);
+    min-width: 280px;
+  }
+  
+  .scholar-image-container {
+    height: 180px;
+  }
+  
+  .scholar-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scholars-carousel-container {
+    padding: 50px 20px;
+  }
+  
+  .scholars-title {
+    font-size: 2.5rem;
+  }
+  
+  .scholars-subtitle {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  
+  .carousel-wrapper {
+    gap: 15px;
+  }
+  
+  .scholars-flex-container {
+    gap: 20px;
+  }
+  
+  .scholar-card {
+    width: calc((100% - (20px * 1)) / 2);
+    min-width: 250px;
+  }
+  
+  .scholar-image-container {
+    height: 160px;
+  }
+  
+  .scholar-info {
+    padding: 20px;
+    min-height: 280px;
+  }
+  
+  .scholar-name {
+    font-size: 1.5rem;
+  }
+  
+  .support-text {
+    font-size: 1rem;
+  }
+  
+  .quran-verse {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .scholars-title {
+    font-size: 2rem;
+  }
+  
+  .scholar-card {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .scholar-image-container {
+    height: 200px;
+  }
+  
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  
+  .scholar-actions {
+    flex-direction: column;
+  }
+  
+  .donate-btn, .learn-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholars-carousel-container {
+    padding: 40px 15px;
+  }
+  
+  .scholar-image-container {
+    height: 180px;
+  }
+  
+  .scholar-info {
+    padding: 20px;
+    min-height: 260px;
+  }
+  
+  .quran-verse {
+    font-size: 1.3rem;
+  }
+}

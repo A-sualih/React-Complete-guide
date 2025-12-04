@@ -10,6 +10,8 @@ import PrayerTimings from "./Components/Homepage/PrayerTimings";
 import ServicesSection from "./Components/Service/ServicesSection";
 import DonationCard from "./Components/Service/DonationCard";
 import Courses from "./Components/Courses/Courses";
+import EventsSection from "./Components/Event/EventsSection";
+import ScholarsCarousel from "./Components/scholars/ScholarsCarousel";
 const App = () => {
   return (
     <div className="app">
@@ -23,6 +25,8 @@ const App = () => {
       <ServicesSection/>
       <DonationCard/>
       <Courses/>
+      <EventsSection/>
+      <ScholarsCarousel/>
     </div>
   );
 };
