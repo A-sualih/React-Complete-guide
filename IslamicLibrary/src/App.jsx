@@ -12,6 +12,7 @@ import DonationCard from "./Components/Service/DonationCard";
 import Courses from "./Components/Courses/Courses";
 import EventsSection from "./Components/Event/EventsSection";
 import ScholarsCarousel from "./Components/scholars/ScholarsCarousel";
+import BlogsSection from "./Components/Blog/BlogsSection";
 const App = () => {
   return (
     <div className="app">
@@ -27,6 +28,7 @@ const App = () => {
       <Courses/>
       <EventsSection/>
       <ScholarsCarousel/>
+      <BlogsSection/>
     </div>
   );
 };
