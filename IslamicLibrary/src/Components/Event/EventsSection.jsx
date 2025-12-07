@@ -48,7 +48,7 @@ const EventsSection = () => {
   ];
 
   return (
-    <div className="events-container">
+    <div className="events-container" id='events'>
       <header className="events-header">
         <h1 className="events-title">Events</h1>
         <p className="events-subtitle">The upcoming events and services in our Mosque</p>

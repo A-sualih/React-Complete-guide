@@ -1,5 +1,7 @@
 .donation-card {
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 60px;
   min-height: 100vh;
   background: linear-gradient(135deg, #0de34d 0%, #1b06d4 100%);
   display: flex;

@@ -101,7 +101,7 @@ const ScholarsCarousel = () => {
   const visibleScholars = scholars.slice(currentIndex, currentIndex + itemsPerView);
 
   return (
-    <div className="scholars-carousel-container">
+    <div className="scholars-carousel-container" id='pages'>
       <header className="scholars-header">
         <h1 className="scholars-title">Islamic Scholars</h1>
         <p className="scholars-subtitle">

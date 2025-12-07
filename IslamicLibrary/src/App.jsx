@@ -13,6 +13,7 @@ import Courses from "./Components/Courses/Courses";
 import EventsSection from "./Components/Event/EventsSection";
 import ScholarsCarousel from "./Components/scholars/ScholarsCarousel";
 import BlogsSection from "./Components/Blog/BlogsSection";
+import FooterSection from "./Components/Footer/FooterSection";
 const App = () => {
   return (
     <div className="app">
@@ -29,6 +30,7 @@ const App = () => {
       <EventsSection/>
       <ScholarsCarousel/>
       <BlogsSection/>
+      <FooterSection/>
     </div>
   );
 };

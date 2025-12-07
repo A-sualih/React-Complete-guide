@@ -1,11 +1,13 @@
 /* Courses.css */
 .courses-container {
- width: 80%;
+  width: 80%;
   margin: 0 auto;
   padding: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
+  /* Add padding-top to push content below fixed header */
+  padding-top: 120px; /* Add this line */
 }
 
 .courses-header {
@@ -293,14 +295,29 @@
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+  .courses-container {
+    width: 90%;
+    padding: 1.5rem;
+    padding-top: 110px; /* Adjusted for tablet */
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .courses-container {
+    width: 95%;
+    padding: 1rem;
+    padding-top: 100px; /* Adjusted for mobile */
+  }
+  
   .courses-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .courses-container {
-    padding: 1rem;
   }
 
   .main-title {
@@ -327,7 +344,9 @@
 
 @media (max-width: 480px) {
   .courses-container {
+    width: 100%;
     padding: 0.5rem;
+    padding-top: 90px; /* Adjusted for small mobile */
   }
 
   .course-content {

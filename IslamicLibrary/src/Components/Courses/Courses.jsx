@@ -87,7 +87,7 @@ const Courses = () => {
   };
 
   return (
-    <div className="courses-container">
+    <div className="courses-container" id="courses">
       <header className="courses-header">
         <h1 className="main-title">Courses</h1>
         <p className="main-subtitle">Watch and learn from quality courses</p>
