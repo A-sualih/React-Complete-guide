@@ -1,146 +1,148 @@
 .navbar {
-  padding: 20px 0px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background-color: var(--bg-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 .navbar .logo {
-  width: 150px;
-  border-radius: 20px;
+  height: 50px;
+  width: auto;
   cursor: pointer;
+  transition: var(--transition);
 }
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
 .navbar-menu {
-  cursor: pointer;
   display: flex;
   list-style: none;
-  gap: 20px;
-  color: #49557e;
-  font-size: 18px;
+  gap: 30px;
+  color: var(--text-light);
+  font-size: 17px;
+  font-weight: 500;
 }
+
+.navbar-menu a, .navbar-menu Link {
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.navbar-menu a:hover::after, 
+.navbar-menu .active::after {
+  width: 100%;
+}
+
+.navbar-menu .active {
+  color: var(--primary-color);
+}
+
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
-.navbar button {
-  background: transparent;
-  font-size: 16px;
-  color: #49557e;
-  border: 1px solid tomato;
-  padding: 5px 20px;
-  border-radius: 50px;
+
+.navbar-right img {
   cursor: pointer;
-  transition: 0.3s;
+  transition: var(--transition);
 }
+
+.navbar-right img:hover {
+  transform: translateY(-2px);
+}
+
+.navbar button {
+  background: var(--primary-color);
+  font-size: 16px;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(255, 76, 36, 0.3);
+}
+
 .navbar button:hover {
-  background-color: #d4d7e0;
+  background-color: #e63e1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 76, 36, 0.4);
 }
-.navbar .active {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
-}
+
 .navbar-search-icon {
   position: relative;
+  display: flex;
+  align-items: center;
 }
-.navbar-search-icon .dot {
-  position: absolute;
-  min-width: 10px;
-  min-height: 10px;
-  background-color: rgb(66, 25, 188);
-  border-radius: 5px;
-  top: -8px;
-  right: -8px;
-}
+
 .dot {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  background-color: rgb(0, 255, 145);
+  top: -8px;
+  right: -8px;
+  background-color: var(--primary-color);
   color: white;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 10px;
+  font-weight: 700;
   border-radius: 50%;
   width: 18px;
   height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--bg-soft);
 }
+
 .hamburger {
   display: none;
-  width: 280px;
-  cursor: pointer;
-}
-.close-icon {
-  display: none;
-  width: 28px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  width: 30px;
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
-  .navbar .logo {
-    width: 140px;
-  }
-  .navbar-menu {
-    gap: 20px;
-    font-size: 17px;
-  }
-  .navbar-right {
-    gap: 30px;
-  }
-  .navbar-right img {
-    width: 22px;
-  }
-  .navbar-right button {
-    padding: 8px 25px;
-  }
+.close-icon {
+  display: none;
+  width: 24px;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
+
 @media (max-width: 900px) {
-  .navbar .logo {
-    width: 120px;
-  }
-  .navbar-menu {
-    gap: 15px;
-    font-size: 16px;
-  }
-  .navbar-right {
-    gap: 20px;
-  }
-  .navbar-right img {
-    width: 20px;
-  }
-  .navbar-right button {
-    padding: 7px 20px;
-    font-size: 15px;
-  }
-}
-@media (max-width: 750px) {
   .navbar-menu {
     position: fixed;
     top: 0;
-    right: -200px;
-    background: #fff;
+    right: -100%;
+    background: white;
     height: 100vh;
-    width: 150px;
+    width: 250px;
     flex-direction: column;
-    gap: 35px;
-    color: black;
-    background-color: rgb(0, 30, 255);
-    padding-top: 100px;
-    align-items: flex-start;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    padding-top: 80px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
   }
 
   .navbar-menu.open {
-       right: 0;
+    right: 0;
   }
 
   .hamburger {
-
     display: block;
   }
 
@@ -149,8 +151,9 @@
   }
 
   .navbar-menu a {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
     width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 15px 0;
   }
-}
+}
